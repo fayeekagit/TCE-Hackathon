@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+
+        <title id="title"></title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <script>
+      fetch('https://web-it-like-spider.onrender.com/hackathon/home/',{
+        method:'GET',
+      }).then(response => response.json())
+          .then(data=> {
+            document.getElementById('texttitle').innerHTML=data.name;
+            document.getElementById('contact').innerHTML=data.contact_number;
+            document.getElementById('hack_start').innerHTML=data.start_date;
+            document.getElementById('hack_end').innerHTML=data.end_date;
+            document.getElementById('reg_start').innerHTML=data.registration_start_date;
+            document.getElementById('reg_end').innerHTML=data.registration_end_date;
+            document.getElementById('round-1').innerHTML=data;
+            document.getElementById('round-2').innerHTML=data.registration_end_date;
+            document.getElementById('round-3').innerHTML=data.registration_end_date;
+            document.getElementById('ie').innerHTML=data.organizers[0].organizer_info;
+            document.getElementById('csi').innerHTML=data.registration_end_date;
+            document.getElementById('announce-1').innerHTML=data.announcements.announcement_text;
+            document.getElementById('announce-2').innerHTML=data.registration_end_date;
+
+
+          })
+    </script>
+
+
+    <body>
+      
+      <div class="center">
+       </div>
+
+      <!--navbar-->
+
+      
+        <nav>
+            <a href="/TCE Hackathon/frontend.html"></a>
+            <img src="/images/tce_logo.png" alt="">
+
+            <div id="fp-nav" class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#location">location</a></li>
+                    <li><a href="#track">Track</a></li>
+                    <li><a href="#club">Clubs</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+        
+                </ul>
+            </div>
+        </nav>
+      </section>
+
+      <!--front cover-->
+      <section id="home">
+      <div class="heroslider">
+        <div class="img">
+          <img src="/images/SeekPng.com_computer-vector-png_2315426.png">   
+        </div>
+        <div class="texttitle">
+          <h1 id="texttitle"></h1>
+        </div>                
+      </div>
+      </section>
+
+
+
+      <!--about-->
+
+      <sectionid="about">
+      <h2 class="h2lone">ABOUT</h2>
+      <div class="intro">
+      <blockquote>
+        <p>Thiagarajar College of Engineering proudly presents <b>HACKATHON CONTEST 2023</b>. A 24-hour Hackathon where students from all over the state come together and work on different problem statements. Problem statements include both software and electronic tracks. This serves as a golden opportunity to test your skills against the best fellow contenders for cash prizes and more! Participants will be building projects from scratch which will be evaluated by our panel of experienced judges to decide the final winners.</p>
+      </blockquote>
+        <h2><b><em>Ignite your creativity!<br>Register today and hack your way to victory!</em></b></h2>
+      </div>
+      <div class="announcements">
+        <p id="announce-1"></p>
+        <p id="announce-2"></p>
+
+      </div>
+      </section>
+
+      <!--register---->
+      <section class="location">
+      <div class = "register"> 
+        <button id="registerButton">Register</button>
+      </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.6209038198226!2d78.07936421422974!3d9.882137377765295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58f98cfb84d%3A0x29f51efea3e84bf2!2sThiagarajar%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1663528295126!5m2!1sen!2sin"  
+        style="border:0;"
+        loading="lazy"
+        width="200vw" 
+        height="200vw"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+
+    <!--timeline-->
+
+
+    <h2 class="h2lone">TIMELINE</h2>
+    <section class="dates">
+      <div class="timeline">
+        <div class="checkpoint">
+          <div>
+           <h2>Registration Starts By</h2>
+           <p id="reg_start"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Registration Ends By</h2>
+           <p id="reg_end"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Start Hacking </h2>
+           <p id="hack_start"></p>
+          </div>
+        </div>
+        <div class="checkpoint">
+          <div>
+           <h2>Wind Up</h2>
+           <p id="hack_end"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="track">
+      <!--Track-->
+      <h2 class="h2lone">TRACKS</h2>
+        <section class="row">
+        <div class="box">
+          <div class="image-container">
+            <img class='blur' src="/images/wp1904056-developer-wallpapers.jpg" alt="deevlopment">
+            <div class="overlay">
+              <div class="card-content">
+                <h1 class="card-title">Development</h1>
+                <p class="card-info">A track to develop Websites and Mobile Apps based on the problem statements we have for you, in line with the theme.Generate creative ideas and solutions for addressing each problem statement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image-container">
+            <img class='blur' src="/images/IMG-MC-blockchain.jpg" alt="blockchain">
+            <div class="overlay">
+              <div class="card-content">
+                <h1 class="card-title">Blockchain</h1>
+                <p class="card-info">This track is for Web3 enthusiasts to turn ideas into actual projects. Opportunity to work on blockchain-based problem statements focussing on different areas across NFTs, DeFi to pursue a more sustainable future.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="box">
+          <div class="image-container">
+            <img class='blur' src="/images/IoT.jpg" alt="iot">
+            <div class="overlay">
+              <div class="card-content">
+                <h1 class="card-title">IOT</h1>
+                <p class="card-info">This track is for IOT enthusiasts to turn their ideas into reality.Ready to connect with sensors, software, and other technologies to connect and exchange data with other devices or systems over the internet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image-container">
+            <img class='blur' src="/images/mll.jpg" alt="ml">
+            <div class="overlay">
+              <div class="card-content">
+                <h1 class="card-title">AI/ML</h1>
+                <p class="card-info">A track for all ML enthusiasts out there. It brings together participants to solve real-data challenges based on Sustainability by applying Machine learning. It aims to bring to life creative solutions to leverage the power of AI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+    </section>
+
+
+    <!--clubs-->
+
+    <sectionid="club">
+      <h2 class="h2lone">Organized By</h2>
+      <div class="club">
+        <div id="ie" class="ie">
+          <p id="ie"></p>
+            <img src="/images/1200px-Institution_of_Engineers_(India)_Logo.svg.png">
+        </div>
+        <div id="csi" class="csi">
+            <img src="/images/csilogo.png">
+        </div>
+      </div>
+    </section>
+
+
+    <!--contacts-->
+
+    <section class="contact">
+      <h3>Any Queries</h3>
+      <div class="contact-no">       
+        <div id="contact"></div>
+        <img src="/images/contact1.png" alt="contact">
+      </div>
+    </section>
+      <br>
+      <hr size="2">
+      <br>
+
+    <!--faq-->
+
+    <section id="faq">
+      <h2 class="h2lone">FAQ</h2>
+      <button class="accordion">What is Hackathon Contest?</button>
+      <div class="panel">
+        <p>Hackathon Contest is a 24-hour long hackathon event where thousands of students from all over India collaborate to work on different problem statements to give an obliging solution.</p>
+      </div>
+      <button class="accordion">Who can participate?</button>
+      <div class="panel">
+        <p>It is open to all undergraduate students from all colleges across India.</p>
+      </div>
+      <button class="accordion">How much is the participation fee?</button>
+      <div class="panel">
+        <p>Participation is absolutely free inclusive of resources.</p>
+      </div>
+      <button class="accordion">What is the team size to participate in the Hackathon Contest?</button>
+      <div class="panel">
+        <p>A team of 3 is required to participate.</p>
+      </div>
+      <button class="accordion">Will it be conducted in person or in online?</button>
+      <div class="panel">
+        <p>This year it will be conducted in offline mode in TCE Campus, Madurai.</p>
+      </div>
+    </section>
+
+    <script>
+        const registerButton = document.getElementById("registerButton");
+        registerButton.addEventListener("click", function () {
+            window.location.href = "/register.html";
+        });
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for(i=0;i<acc.length;i++)
+        {
+          acc[i].addEventListener("click", function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if(panel.style.maxHeight)
+            {
+              panel.style.maxHeight=null;
+            }
+            else
+            {
+              panel.style.maxHeight=panel.scrollHeight+"px";
+            }
+          });
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            new fullpage('#fullpage', {
+                navigation: true,
+                responsiveHeight:'100vh',
+                //sectionsColor: ['#ff5f45', '#0798ec', '#fc6c7c'],
+            });
+        });
+    </script>        
+    </body>
+</html>
